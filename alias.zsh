@@ -4,3 +4,6 @@ alias docker-rmi-nones='docker images -qf dangling=true | xargs docker rmi'
 alias d-rmi-nones='docker-rmi-nones'
 alias docker-rm-containers='docker ps -aqf status=exited | xargs docker rm -v'
 alias d-rm-containers='docker-rm-containers'
+
+# application command
+alias plantuml-server="docker run -d -p 8080:8080 plantuml/plantuml-server"
