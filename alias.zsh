@@ -7,3 +7,4 @@ alias d-rm-containers='docker-rm-containers'
 
 # application command
 alias plantuml-server="docker run -d -p 8080:8080 plantuml/plantuml-server"
+alias aws="docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli"
