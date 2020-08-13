@@ -6,7 +6,7 @@ alias docker-rm-containers='docker ps -aqf status=exited | xargs docker rm -v'
 alias d-rm-containers='docker-rm-containers'
 
 # application command
-alias plantuml-server='docker run -d -p 8080:8080 plantuml/plantuml-server'
+alias plantuml-server='docker run -d --name plantuml-server -p 8080:8080 -e PLANTUML_LIMIT_SIZE=160000 plantuml/plantuml-server'
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v ${PWD}:/aws amazon/aws-cli'
 alias openapi-generator='docker run -it --rm -v ${PWD}:/local -w /local openapitools/openapi-generator-cli'
 alias radigo='docker run -it --rm -v ${PWD}:/output yyoshiki41/radigo'
