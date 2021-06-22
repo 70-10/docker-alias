@@ -11,3 +11,4 @@ alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v ${PWD}:/aws amazon/aws-cl
 alias openapi-generator='docker run -it --rm -v ${PWD}:/local -w /local openapitools/openapi-generator-cli'
 alias radigo='docker run -it --rm -v ${PWD}:/output yyoshiki41/radigo'
 alias kindlegen='docker run -it --rm -v ${PWD}:/kindle 7010/kindlegen'
+alias serve-local='docker run --rm -v ${PWD}:/usr/share/nginx/html:ro -p 8080:80 nginx:alpine'
